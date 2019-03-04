@@ -1,311 +1,284 @@
 /*eslint-env browser*/
 
-//STEP  1.	Create a string array that contains your five favorite movies. Then, use the console to display the second movie in your array.
-var fruits = ["pineapple", "rasberry", "cherry", "apple", "orange"]
-window.console.log(fruits[1]);
+/*STEP  1.	
+
+//var fruits = ["pineapple", "rasberry", "cherry", "apple", "orange"]
+//window.console.log(fruits[1]);
 
 
-//STEP  2.	Declare an array called movies using the function constructor method. Add the length of 5 into the constructor. Then, assign one of your favorite movies to each index in the array until you have 5 total movies in your array. Then, use the console to display the first movie in your array.
+//STEP  2.	
 
-var movie = new Array(5);
-    movie[0] "Jurassic Park",
-    movie[1] "Titanic",
-    movie[2] "Toy Story",
-    movie[3] "Iron Man",
-	movie[4] "X Men",
-window.console.log(movies[0]);
+//var movie = new Array(5);
+//    movie[0] = "Jurassic Park",
+//    movie[1] = "Titanic",
+//    movie[2] = "Toy Story",
+//    movie[3] = "Iron Man",
+//	  movie[4] = "X Men",
+//window.console.log(movie[0]);
 
 		
 		
-//STEP 3.	Copy your code from step 2. Add a new movie into the 5th position within your array. Then, use the console to display the length of the array. You should now have 6 total movies stored in the array.
+//STEP 3.
 
-var movie = new Array(5);
-    movie[0] "Jurassic Park",
-    movie[1] "Titanic",
-    movie[2] "Toy Story",
-    movie[3] "Iron Man",
-	movie[4] "X Men",
-	movie[5] "THOR",	
-window.console.log(movie.length);
-
-
-//STEP 4.	Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 5 total movies in your array. Now, use the delete operator to remove the first movie in the array. Use the console to display the contents of the array.
-
-var movie = new Array(5);
-    movie[0] "Jurassic Park",
-    movie[1] "Titanic",
-    movie[2] "Toy Story",
-    movie[3] "Iron Man",
-	movie[4] "X Men",
-	movie[5] "THOR",	
-movie.delete[0];
-console.log(movie[]);
+//var movies = new Array(5);
+//    movies[0] = "Jurassic Park",
+//    movies[1] = "Titanic",
+//    movies[2] = "Toy Story",
+//    movies[3] = "Iron Man",
+//	  movies[4] = "X Men",
+//movie.push("Cinderella");	
+//window.console.log(movies.length);
+//window.console.log(movies);
 
 
-//STEP 5.	Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 7 total movies in your array. Now, use a for loop to iterate through the array and display each movie within the console window.
-var i;
-var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man"];
- 	for (i = 0; i < movies.length; i += 1){
-		window.console.log(movies[i]);
-	}
+//STEP 4.	
 
-//STEP 6.	Copy the code from step 5. Now, use a for-in loop to iterate through the array and display each movie within the console window.
-var i;
-var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man"];
- 	for (i in movies) {
-		window.console.log(movie[i]);
-	}
-
-
-//STEP 7.	Copy the code from step 5. Using the for-in loop to iterate through the array, display each movie within the console window in a sorted view.
-
-var i;
-var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man"];
- 	array.sort();
-	window.console.log(movie[i]);
-	}
-
-
-//STEP 8.	Copy the code from step 5. Under the existing array, create a new array called leastFavMovies. Populate the array with the 3 movies that you regret watching. Display both arrays within the console window so that it’s formatted to look like this (note the spacing, you must include that too):
-//	Movies I like:
+//var movies = ["Jurassic Park","Titanic","Toy Story","Iron Man","X Men"];
 //
-//Movie 1
-//Movie 2
-//Movie 3
-//…
+//movies.shift();
+//window.console.log(movies);
+
+
+//STEP 5.	
+
+//var i;
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+// 	for (i = 0; i < movies.length; i += 1){
+//		window.console.log(movies[i]);
+//	}
+
+
+
+//STEP 6.
+
+//var i;
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+// 	for (i in movies) {
+//		window.console.log(movies[i]);
+//	}
+
+
+//STEP 7.	
+
+//var i;
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man"];
+//for (i in movies) {
+// 	movies.sort();
+//	window.console.log(movies[i]);
+//	}
+
+
+////STEP 8.	
+
+//var i;
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
+//window.document.write("  "+"  Movies I like:"+"<br>"+"<br>");
+//for (i = 0; i < movies.length; i++){
+//window.document.write(movies[i]+"<br>");
+//}
+//window.document.write("<br>"+"  Movies I regret watching:"+"<br>"+"<br>");
+//for (i = 0; i < leastFavMovies.length; i++){
+//window.document.write(leastFavMovies[i]+"<br>");
+//}
+
+
+
+
+
+//STEP 9.
+
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
+
+//movies = (movies.concat(leastFavMovies));
+//window.console.log(movies.reverse());
+
+
+
+
+//STEP 10.	
+
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
+
+//movies = (movies.concat(leastFavMovies));
+//window.console.log(movies);
+//console.log(movies.lastIndexOf("Idiocracy"));
+
+
+
+
+//STEP 11.	
+
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
+//movies = (movies.concat(leastFavMovies));
+//console.log(movies.indexOf("Jurassic Park"));
+
+
+
+//STEP 12.	
+
+//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
+//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
+//movies = (movies.concat(leastFavMovies));
+
+//console.log(movies.indexOf("Dumb and Dumber", "Jackass","Idiocracy" ));
+//movies.splice(7, 0,"Avengers", "Doctor Strange", "Guardians of the Galaxy");
+//window.console.log(movies);
+
+
+
+//STEP 13.	
+
+//var employees = [];
+//var i;
+//var employee1 = [];
+//employee1["id"] = 4235;
+//employee1["name"] = "Zak Ruvalcaba";
+//employee1["title"] = "Web Developer";
+//employee1["department"] = "Engineering";
+//employee1["isCurrent"] = true;
 //
-//Movies I regret watching:
+//var employee2 = [];
+//employee2["id"] =5000;
+//employee2["name"] = "Melinda Hasselbring";
+//employee2["title"] = "Web Developer";
+//employee2["department"] = "Engineering";
+//employee2["isCurrent"] = true;
 //
-//Movie 1
-//Movie 2
-//Movie 3
+//employees.push(employee1,employee2);
+//window.console.log(employees[1]["name"]);
 
+//STEP 14.	
 
-var movie = new Array(5);
-    movie[0] "Jurassic Park",
-    movie[1] "Titanic",
-    movie[2] "Toy Story",
-    movie[3] "Iron Man",
-	movie[4] "X Men",
-	movie[5] "THOR",	
-
-var leastFavMovies = new leastFavMovies(3);
-	leastFavMovies[0] "Dumb and Dumber",
- 	leastFavMovies[1] "Jackass",
-	leastFavMovies[2] "Idiocracy",
-
-console.log("  Movies I like: " + "\n" +"\n" + movie[0] + "\n" + "Movie " + movie[1] + "\n"  + "Movie " + movie[2] + "\n" + "\n" + "  Movies I regret watching: " + "\n" +"\n" + movie[0] + "\n" + "Movie " + movie[1] + "\n"  + "Movie " + movie[2] + "\n" + "\n");
-
-
-//STEP 9.	Copy the code from step 8. Now, use the concat() method to merge the two arrays together into a single array called movies. Use the console window to display the list in reverse sorted order.
-
-var movies = new Array(5);
-    movies[0] "Jurassic Park",
-    movies[1] "Titanic",
-    movies[2] "Toy Story",
-    movies[3] "Iron Man",
-	movies[4] "X Men",
-	movies[5] "THOR",	
-
-
-var leastFavMovies = new leastFavMovies(3);
-	leastFavMovies[0] "Dumb and Dumber",
- 	leastFavMovies[1] "Jackass",
-	leastFavMovies[2] "Idiocracy",
-		
-movies = movies.concat("Dumb and Dumber",  "Jackass", "Idiocracy")
-console.log(movies.reverse());
-
-
-//STEP 10.	Copy the code from step 9. Use an array function to return just the last item in the array and display it within the console window.
-var movies = new Array(5);
-    movies[0] "Jurassic Park",
-    movies[1] "Titanic",
-    movies[2] "Toy Story",
-    movies[3] "Iron Man",
-	movies[4] "X Men",
-	movies[5] "THOR",	
-
-var leastFavMovies = new leastFavMovies(3);
-	leastFavMovies[0] "Dumb and Dumber",
- 	leastFavMovies[1] "Jackass",
-	leastFavMovies[2] "Idiocracy",
-		
-movies = movies.concat("Dumb and Dumber",  "Jackass", "Idiocracy")
-console.log(movies.lastIndexOf("Idiocracy"));
-
-//STEP 11.	Copy the code from step 10. Remove the previous method and this time use a method to return just the first item in the array and display it within the console window
-
-var movies = new Array(5);
-    movies[0] "Jurassic Park",
-    movies[1] "Titanic",
-    movies[2] "Toy Story",
-    movies[3] "Iron Man",
-	movies[4] "X Men",
-	movies[5] "THOR",	
-
-var leastFavMovies = new leastFavMovies(3);
-	leastFavMovies[0] "Dumb and Dumber",
- 	leastFavMovies[1] "Jackass",
-	leastFavMovies[2] "Idiocracy",
-		
-movies = movies.concat("Dumb and Dumber",  "Jackass", "Idiocracy")
-console.log(movies.indexOf("Jurassic Park"));
-
-//STEP 12.	Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
-var movies = new Array(5);
-    movies[0] "Jurassic Park",
-    movies[1] "Titanic",
-    movies[2] "Toy Story",
-    movies[3] "Iron Man",
-	movies[4] "X Men",
-	movies[5] "THOR",	
-
-var leastFavMovies = new leastFavMovies(3);
-	leastFavMovies[0] "Dumb and Dumber",
- 	leastFavMovies[1] "Jackass",
-	leastFavMovies[2] "Idiocracy",
-
-movies = movies.concat("Dumb and Dumber",  "Jackass", "Idiocracy")
-console.log(movies.indexOf("Dumb and Dumber", "Jackass","Idiocracy" ));
-console.log(movies.splice(6, 0,"Avengers", "Doctor Strange", "Guardians of thr Galaxy"));
-
-//STEP 13.	Create two associative arrays called employee1 and employee2 respectively. Each array should have an employeeid, name, title, department, and whether or not the employee is a current employee of the company. Now, add both of those associative arrays to a new array called employees. Then, programmatically display the name of the second employee within a console window. 
-var employee1 = [];
-employee["id"] = 4235;
-employee["name"] = "Zak Ruvalcaba";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-var employee2 = [];
-employee["id"] =5000;
-employee["name"] = "Melinda Hasselbring";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-console.log(employees.concat(employee2));
-console.log(employees.name[1]);
-
-
-
-
-//STEP 14.	Copy the code from step 13. Modify the code slightly so that you’re using a loop to iterate through the array and print out the names of both employees.
-var i;
-var employee1 = [];
-employee["id"] = 4235;
-employee["name"] = "Zak Ruvalcaba";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-var employee2 = [];
-employee["id"] =5000;
-employee["name"] = "Melinda Hasselbring";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-console.log(employees.concat(employee2));
-
-for(var 1 = 0; index < employees.length; 1++) {
-    console.log(i  + employees[i]);
-}
-
-
-//STEP 15.	Copy the code from step 14. Now add a third employee and set his employment status to false. Then, programmatically loop through the array but don’t display an employee if they aren’t a current employee of the company. Basically, only the first two should appear in the console window.
-var employee1 = [];
-employee["id"] = 4235;
-employee["name"] = "Zak Ruvalcaba";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-var employee2 = [];
-employee["id"] =5000;
-employee["name"] = "Melinda Hasselbring";
-employee["title"] = "Web Developer";
-employee["department"] = "Engineering";
-employee["isCurrent"] = true;
-
-var employee3 = [];
-employee["id"] =6000;
-employee["name"] = "Mike Boone";
-employee["title"] = "Project Manager";
-employee["department"] = "Engineering";
-employee["isCurrent"] = false;
-
-console.log(employees.concat(employee2));
-employees.push(employee3);
-
-var i;
-
-for (i = 0; i < employees.length; i +=1) {
-	window.document.write(employees[i][0] + " " + employees[i][1]);
-}
-
-
-var current = employees.find(function(element) {
-  return employees["isCurrent"] = true;
-});
-
-
-//STEP 16.	Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. The array should look something like this: 
-
-//movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
-
-//Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type.
-
-var i;
-var movies = [["Avengers",1],["Doctor Strange",2],["THOR",3],["X Men",4],["THOR",5]];
-for (i = 0; i < employees.length; i +=1) {
-	window.document.write(movies[i][0] + " " + movies[i][1] + " " + movies[i][2] + " " + movies[i][3] + " " + movies[i][4]);
-}
-
-//STEP 17.	Create a string array called employees using literal notation and populate the array with several employee names. Then, create an anonymous function called showEmployee. The function should accept a parameter. Call this function, passing in the employees array into the function as a parameter. Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in the console window:
-
-//Employees: 
+//var employees = [];
+//var i;
+//var employee1 = [];
+//employee1["id"] = 4235;
+//employee1["name"] = "Zak Ruvalcaba";
+//employee1["title"] = "Web Developer";
+//employee1["department"] = "Engineering";
+//employee1["isCurrent"] = true;
 //
-//ZAK 
-//JESSICA 
-//MARK 
-//FRED 
-//SALLY
-
-var employees = ["Zak", "JESSICA", "MARK", "FRED", "SALLY"];
-
-function display(employee_list) {
-    "use strict";
-    var i = 1;
-    employees.forEach(function (employee) {
-        window.console.log(String(i) + ". " + employee);
-        i += 1;
-    });
-    window.console.log("");
-}
+//var employee2 = [];
+//employee2["id"] =5000;
+//employee2["name"] = "Melinda Hasselbring";
+//employee2["title"] = "Web Developer";
+//employee2["department"] = "Engineering";
+//employee2["isCurrent"] = true;
+//
+//employees.push(employee1,employee2);
+//
+//for(var i = 0; i < employees.length; i++) {
+//    window.console.log(employees[i]["name"]);
+//}
 
 
-//STEP 18.	Write a JavaScript function to filter false, null, 0 and blank values from an array.
-//Test Data: window.console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
-//Expected Result: [58, "abcd", true]
+////STEP 15.	
 
-var items = [58, '', 'abcd', true, null, false, 0];
-window.console.log(filterValues([58, '', 'abcd', true]));
+//var employees = [];
+//var i;
+//var employee1 = [];
+//employee1["id"] = 4235;
+//employee1["name"] = "Zak Ruvalcaba";
+//employee1["title"] = "Web Developer";
+//employee1["department"] = "Engineering";
+//employee1["isCurrent"] = true;
+//
+//var employee2 = [];
+//employee2["id"] =5000;
+//employee2["name"] = "Melinda Hasselbring";
+//employee2["title"] = "Web Developer";
+//employee2["department"] = "Engineering";
+//employee2["isCurrent"] = true;
+//
+//employees.push(employee1,employee2);
+//
+//var employee3 = [];
+//employee3["id"] = 6000;
+//employee3["name"] = "Mike Boone";
+//employee3["title"] = "Project Manager";
+//employee3["department"] = "Engineering";
+//employee3["isCurrent"] = false;
+//
+//employees.push(employee3);
+//window.console.log(employees);
+//
+//
+//for(var i = 0; i < employees.length; i++) {
+//	
+//	if ("isCurrent" === true){
+//    window.console.log(employees[i]["name"]);
+//	}
+//}
+//
+//foreach(employees as key => item) {
+//	foreach(item as key => isCurrent){
+//		if key ==
+//	}
+//}
+
+//STEP 16.	
+
+//var movies = [["Avengers", 1],["Doctor Strange", 2],["THOR", 3],["X Men", 4],["THOR", 5]];
+//	
+//var myFaveMovies = movies.filter(function (item){
+//	"use strict"; 
+//	return typeof item === "string";	
+//});
+//window.document.write(myFaveMovies);
 
 
-//STEP 19.	Write a JavaScript function to get a random item from an array. So if I create a numeric array with 10 numbers and then pass that array into my function, the function should randomly return one of those numbers.
-
-function random_item(items) {
-  return items[Math.floor(Math.random()*items.length)];   
-}
-
-var items = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
-console.log(random_item(items));
-
-//STEP 20.	Write a JavaScript function to get the largest number from a numeric array. 
 
 
-var myArray = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
 
-console.log(Math.max(...myArray));
+
+
+
+//STEP 17.
+
+//var employees = ["Zak", "JESSICA", "MARK", "FRED", "SALLY"];
+//var showEmployees = function(showEmployees){
+//    "use strict";
+////    var i = 1;
+//    employees.forEach(function (employees) {
+//        window.console.log(employees);
+////        i += 1;
+//    });
+//}
+//showEmployees();
+
+
+
+
+//STEP 18.
+
+//var items = [58, '', 'abcd', true, null, false, 0];
+//var filterValues = items.filter(function(items){
+//	"use strict";
+//	return typeof items  === "number" || items  === "abcd" || items  === "true";
+//});
+//window.console.log(filterValues);
+
+
+
+
+//STEP 19.	
+
+//function random_item(items) {
+//  return items[Math.floor(Math.random()*items.length)];   
+//}
+//
+//var items = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
+//console.log(random_item(items));
+
+
+
+
+//STEP 20.
+
+//var myArray = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
+//console.log(Math.max(...myArray));
+//
