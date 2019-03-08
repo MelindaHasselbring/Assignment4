@@ -1,284 +1,128 @@
 /*eslint-env browser*/
 
-/*STEP  1.	
+//The Product Inventory Management System (55 points)
 
-//var fruits = ["pineapple", "rasberry", "cherry", "apple", "orange"]
-//window.console.log(fruits[1]);
+//In this part of the assignment you will use multi-dimensional arrays to build a small inventory management system. Here are the specifics:
+//•	The primary array will be “inventory”.
 
-
-//STEP  2.	
-
-//var movie = new Array(5);
-//    movie[0] = "Jurassic Park",
-//    movie[1] = "Titanic",
-//    movie[2] = "Toy Story",
-//    movie[3] = "Iron Man",
-//	  movie[4] = "X Men",
-//window.console.log(movie[0]);
-
+//var session;
+//var list = "";
+window.console.log(localStorage);
+window.console.log(localStorage.getItem('inventory'));
+if(localStorage.getItem('inventory') == null){
 		
+var inventory = [
+                [2233, "Hat",       12, 14.99],
+                [3223, " Socks",    36, 9.99],
+                [4824, " Shirt",    10, 15.99],
+                [6343, " Jeans",    22, 39.99],
+                [9382, " Jacket",    5, 49.99]];
+}
+window.console.log(inventory);
+
+
+
+
+function display_menu() {
+    "use strict";
+    window.console.log("Welcome to the Employee Management Application");
+    window.console.log("");
+    window.console.log("COMMAND MENU");
+    window.console.log("view - Show intentory");
+    window.console.log("add - Add a product");
+    window.console.log("del - Delete a product");
+    window.console.log("exit - Exit the program");
+    window.console.log("");
+};
+//display_menu();
+
+
+//•	The nested arrays (products) will each contain elements that represent sku (number), product (string), quantity (number), and cost (floating point number).
+//•	You should have at least 5 products in your inventory.
+
+//•	Similar to lab 9, your application should display a title in the console window along with a command menu that features commands to view all products, update stock, and exit the program. 
+//•	When the user select view, rather than displaying each product in a numeric list like you did in lab 9, you should display the details for each product, ordered by sku number. Here’s an example of what the user should see if they choose the view command:
+
+//2233 Hat (12) $14.99
+//3223 Socks (36) $9.99
+//4824 Shirt (10) $15.99
+//6343 Jeans (22) $39.99
+//9382 Jacket (5) $49.99
+
+
+
+function view(inventory) {
+    "use strict";
+//	window.console.log(inventory);
+	
+	inventory = inventory.sort();
+    // loop the outer array
+	inventory.forEach(function(i){
+//		window.console.log([i]);
+		console.log([i][0][0] + " " + [i][0][1] + " ("  + [i][0][2] + ") $" + [i][0][3]);
+
+}); 
+	
+	
+//•	All data should be persisted using Web Storage. If the user closes the browser and then reopens it, all of the data should be retained from the previous session.
+		 window.console.log(inventory);
+         localStorage.setItem('inventory', inventory.join("|")); 
+    }
+
+//•	If the user selects the update command, a prompt should appear that allows the user to enter a sku number. Once the user enters a correct sku number a second prompt should appear that allows the user to enter a new stock quantity. The quantity should then update the product of the sku number entered.
+
+function update(sku, quantity){
+    "use strict";
+//    sku = parseInt(window.prompt("Enter sku number to be added"), 10);
+    if (sku < 1 || sku > sku.length) {
+        window.alert("Invalid sku number, please re-enter a valid sku number");
+    } else {
+//        if (quantity !== quantity.isInteger()){
+		if(typeof quantity == 'integer') {
+            window.alert("Please re-enter a valid number");
+        } else {
+			var selectedInventory = inventory.forEach(function(i){
+if(inventory[i] == sku) return i;
+});
+            inventory = inventory.splice([selectedInventory][2], quantity);
+        }
+        window.console.log(sku + ' was updated.');
+    }
+}
+
+
+//•	Make sure to validate all inputs. If the user enters a command that’s not valid, the application should be able to handle that. Similarly, if the user enters a bad sku number, or text instead of a number when updating stock, the application should be able to handle that too.
+
+    
+    function main() {
+    "use strict";
+    var command;
+    
+    display_menu();
+//window.console.log(inventory);
 		
-//STEP 3.
-
-//var movies = new Array(5);
-//    movies[0] = "Jurassic Park",
-//    movies[1] = "Titanic",
-//    movies[2] = "Toy Story",
-//    movies[3] = "Iron Man",
-//	  movies[4] = "X Men",
-//movie.push("Cinderella");	
-//window.console.log(movies.length);
-//window.console.log(movies);
-
-
-//STEP 4.	
-
-//var movies = ["Jurassic Park","Titanic","Toy Story","Iron Man","X Men"];
-//
-//movies.shift();
-//window.console.log(movies);
-
-
-//STEP 5.	
-
-//var i;
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-// 	for (i = 0; i < movies.length; i += 1){
-//		window.console.log(movies[i]);
-//	}
-
-
-
-//STEP 6.
-
-//var i;
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-// 	for (i in movies) {
-//		window.console.log(movies[i]);
-//	}
-
-
-//STEP 7.	
-
-//var i;
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man"];
-//for (i in movies) {
-// 	movies.sort();
-//	window.console.log(movies[i]);
-//	}
-
-
-////STEP 8.	
-
-//var i;
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
-//window.document.write("  "+"  Movies I like:"+"<br>"+"<br>");
-//for (i = 0; i < movies.length; i++){
-//window.document.write(movies[i]+"<br>");
-//}
-//window.document.write("<br>"+"  Movies I regret watching:"+"<br>"+"<br>");
-//for (i = 0; i < leastFavMovies.length; i++){
-//window.document.write(leastFavMovies[i]+"<br>");
-//}
-
-
-
-
-
-//STEP 9.
-
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
-
-//movies = (movies.concat(leastFavMovies));
-//window.console.log(movies.reverse());
-
-
-
-
-//STEP 10.	
-
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
-
-//movies = (movies.concat(leastFavMovies));
-//window.console.log(movies);
-//console.log(movies.lastIndexOf("Idiocracy"));
-
-
-
-
-//STEP 11.	
-
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
-//movies = (movies.concat(leastFavMovies));
-//console.log(movies.indexOf("Jurassic Park"));
-
-
-
-//STEP 12.	
-
-//var movies=["Jurassic Park", "Titanic", "THOR", "X Men", "Iron Man","Spider Man", "Cinderella"];
-//var leastFavMovies = ["Dumb and Dumber","Jackass","Idiocracy"];
-//movies = (movies.concat(leastFavMovies));
-
-//console.log(movies.indexOf("Dumb and Dumber", "Jackass","Idiocracy" ));
-//movies.splice(7, 0,"Avengers", "Doctor Strange", "Guardians of the Galaxy");
-//window.console.log(movies);
-
-
-
-//STEP 13.	
-
-//var employees = [];
-//var i;
-//var employee1 = [];
-//employee1["id"] = 4235;
-//employee1["name"] = "Zak Ruvalcaba";
-//employee1["title"] = "Web Developer";
-//employee1["department"] = "Engineering";
-//employee1["isCurrent"] = true;
-//
-//var employee2 = [];
-//employee2["id"] =5000;
-//employee2["name"] = "Melinda Hasselbring";
-//employee2["title"] = "Web Developer";
-//employee2["department"] = "Engineering";
-//employee2["isCurrent"] = true;
-//
-//employees.push(employee1,employee2);
-//window.console.log(employees[1]["name"]);
-
-//STEP 14.	
-
-//var employees = [];
-//var i;
-//var employee1 = [];
-//employee1["id"] = 4235;
-//employee1["name"] = "Zak Ruvalcaba";
-//employee1["title"] = "Web Developer";
-//employee1["department"] = "Engineering";
-//employee1["isCurrent"] = true;
-//
-//var employee2 = [];
-//employee2["id"] =5000;
-//employee2["name"] = "Melinda Hasselbring";
-//employee2["title"] = "Web Developer";
-//employee2["department"] = "Engineering";
-//employee2["isCurrent"] = true;
-//
-//employees.push(employee1,employee2);
-//
-//for(var i = 0; i < employees.length; i++) {
-//    window.console.log(employees[i]["name"]);
-//}
-
-
-////STEP 15.	
-
-//var employees = [];
-//var i;
-//var employee1 = [];
-//employee1["id"] = 4235;
-//employee1["name"] = "Zak Ruvalcaba";
-//employee1["title"] = "Web Developer";
-//employee1["department"] = "Engineering";
-//employee1["isCurrent"] = true;
-//
-//var employee2 = [];
-//employee2["id"] =5000;
-//employee2["name"] = "Melinda Hasselbring";
-//employee2["title"] = "Web Developer";
-//employee2["department"] = "Engineering";
-//employee2["isCurrent"] = true;
-//
-//employees.push(employee1,employee2);
-//
-//var employee3 = [];
-//employee3["id"] = 6000;
-//employee3["name"] = "Mike Boone";
-//employee3["title"] = "Project Manager";
-//employee3["department"] = "Engineering";
-//employee3["isCurrent"] = false;
-//
-//employees.push(employee3);
-//window.console.log(employees);
-//
-//
-//for(var i = 0; i < employees.length; i++) {
-//	
-//	if ("isCurrent" === true){
-//    window.console.log(employees[i]["name"]);
-//	}
-//}
-//
-//foreach(employees as key => item) {
-//	foreach(item as key => isCurrent){
-//		if key ==
-//	}
-//}
-
-//STEP 16.	
-
-//var movies = [["Avengers", 1],["Doctor Strange", 2],["THOR", 3],["X Men", 4],["THOR", 5]];
-//	
-//var myFaveMovies = movies.filter(function (item){
-//	"use strict"; 
-//	return typeof item === "string";	
-//});
-//window.document.write(myFaveMovies);
-
-
-
-
-
-
-
-
-//STEP 17.
-
-//var employees = ["Zak", "JESSICA", "MARK", "FRED", "SALLY"];
-//var showEmployees = function(showEmployees){
-//    "use strict";
-////    var i = 1;
-//    employees.forEach(function (employees) {
-//        window.console.log(employees);
-////        i += 1;
-//    });
-//}
-//showEmployees();
-
-
-
-
-//STEP 18.
-
-//var items = [58, '', 'abcd', true, null, false, 0];
-//var filterValues = items.filter(function(items){
-//	"use strict";
-//	return typeof items  === "number" || items  === "abcd" || items  === "true";
-//});
-//window.console.log(filterValues);
-
-
-
-
-//STEP 19.	
-
-//function random_item(items) {
-//  return items[Math.floor(Math.random()*items.length)];   
-//}
-//
-//var items = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
-//console.log(random_item(items));
-
-
-
-
-//STEP 20.
-
-//var myArray = [289, 90, 412, 369, 783, 374, 45, 219, 125, 8943];
-//console.log(Math.max(...myArray));
-//
+    while (true) {
+        command = window.prompt("Enter command");
+        if (command !== null) {
+            if (command === "view") {
+                view(inventory);
+            } else if (command === "update") {
+				 var sku = parseInt(window.prompt("Enter sku number to be added"), 10);
+				var quantity = parseInt(window.prompt("Enter quantity"), 10);
+                update(sku, quantity);
+				
+//•	If the user selects the exit command, the program should be terminated.
+
+            } else if (command === "exit") {
+				    window.console.log("Program terminated.");
+                break;
+            } else {
+                window.alert("That is not a valid command.");
+            }
+        } else {
+            break;
+        }
+    window.console.log("Program terminated.");
+}
+	}
+main();
